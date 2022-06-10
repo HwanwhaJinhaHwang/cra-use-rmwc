@@ -1,0 +1,51 @@
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks', 'prettier'],
+  parserOptions: {
+    project: './tsconfig.eslint.json',
+  },
+  rules: {
+    // 'linebreak-style': 'off',
+    'no-console': ['error', { allow: ['debug', 'warn', 'error', 'log'] }],
+
+    // 'no-underscore-dangle': 'off',
+    // 'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': [
+      'warn',
+      {
+        devDependencies: true,
+      },
+    ],
+    // 'import/extensions': [
+    //   'error',
+    //   'ignorePackages',
+    //   {
+    //     js: 'never',
+    //     jsx: 'never',
+    //     ts: 'never',
+    //     tsx: 'never',
+    //   },
+    // ],
+    // 'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/jsx-props-no-spreading': 'off',
+    'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
+    // 'react-hooks/rules-of-hooks': 'error',
+    // 'react-hooks/exhaustive-deps': 'warn',
+    // // "import/no-cycle": "off",
+    // // "jsx-a11y/no-autofocus": "off",
+    // 'jsx-a11y/click-events-have-key-events': 'off',
+    // // "jsx-a11y/no-noninteractive-element-to-interactive-role": "off",
+    // 'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    // // "jsx-a11y/no-static-element-interactions": "off",
+    // 'jsx-a11y/label-has-associated-control': 'off',
+    // 'jsx-a11y/label-has-for': 'off',
+    // 'no-param-reassign': ['error', { props: true, ignorePropertyModificationsFor: ['state'] }],
+    // 'no-throw-literal': 'off',
+    // '@typescript-eslint/no-throw-literal': 'off',
+    // 'no-unused-vars': 'warn',
+    // '@typescript-eslint/no-unused-vars': 'off',
+    // 'no-use-before-define': 'off',
+    // '@typescript-eslint/no-use-before-define': ['error'],
+    'react/require-default-props': 'off',
+  },
+};
